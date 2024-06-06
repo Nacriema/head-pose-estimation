@@ -302,7 +302,7 @@ class FaceDetector:
             conf = det[-1]
             cv2.rectangle(image, (bbox[0], bbox[1]),
                           (bbox[2], bbox[3]), box_color)
-            label = f"face: {conf:.2f}"
+            label = f"Track ID: {int(conf)}"
             label_size, base_line = cv2.getTextSize(
                 label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
             cv2.rectangle(image, (bbox[0], bbox[1] - label_size[1]),
